@@ -1,6 +1,6 @@
 # WP Contact Form
 
-<img src="https://s.w.org/style/images/about/WordPress-logotype-wmark.png" alt="WordPress Logo" width="100">
+<img src="https://s.w.org/style/images/about/WordPress-logotype-wmark.png" alt="WordPress Logo" width="250" align="center">
 
 **Contributors:** Jayson Lauza 
 **Tags:** contact form, forms, contact, wordpress  
