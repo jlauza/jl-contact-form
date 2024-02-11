@@ -2,7 +2,7 @@
 
 <img src="https://s.w.org/style/images/about/WordPress-logotype-wmark.png" alt="WordPress Logo" width="250" align="center">
 
-**Contributors:** Jayson Lauza 
+**Contributors:** Jayson Lauza<br/>
 **Tags:** contact form, forms, contact, wordpress  
 **Requires at least:** 5.0  
 **Tested up to:** 5.9  
