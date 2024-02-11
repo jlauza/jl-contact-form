@@ -1,57 +1,55 @@
-WP Contact Form - WordPress Contact Form
-WordPress Plugin Badge: https://wordpress.org/plugins/[plugin-slug]
+# WP Contact Form
 
-Description:
+<img src="https://s.w.org/style/images/about/WordPress-logotype-wmark.png" alt="WordPress Logo" width="100">
 
-WP Contact Form is a simple and powerful contact form plugin for WordPress, empowering you to easily add beautiful and adaptable forms to your website. Whether you need a basic contact form or one with advanced features, [Plugin Name] provides the flexibility and customization you need to ensure smooth communication with your visitors.
+**Contributors:** Jayson Lauza 
+**Tags:** contact form, forms, contact, wordpress  
+**Requires at least:** 5.0  
+**Tested up to:** 5.9  
+**Stable tag:** 1.0.0  
+**License:** GPLv2 or later  
+**License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 
-Features:
+WP Contact Form is a simple, easy-to-use plugin that allows you to add a contact form to your WordPress website.
 
-Seamless Integration: Effortlessly integrate forms into any page, post, or widget with user-friendly shortcodes.
-Customization Freedom: Tailor form fields, labels, buttons, and styles to seamlessly match your website's design identity.
-Robust Validation: Prevent inaccurate information with granular field-specific validation rules.
-Unwavering Security: Shield your forms from spam with built-in reCAPTCHA or Akismet integration.
-Flexible Forms: Create and manage a plethora of contact forms for diverse purposes.
-Instant Notifications: Stay informed with timely email notifications for each form submission.
-Email Customization: Design email notifications that reflect your brand and voice.
-Responsive Design: Deliver an optimal experience on all devices with a responsive layout.
-GDPR Compliance: Maintain data privacy with options for user consent and data deletion.
-Multilingual Support: Translate your forms into any language for a global audience.
-Requirements:
+## Description
 
-WordPress 5.2 or higher
-PHP 7.4 or higher
-Installation:
+WP Contact Form provides a straightforward way for your visitors to get in touch with you. Whether you're running a blog, a small business website, or a portfolio, communication with your visitors is essential. This plugin allows you to create a contact form and place it anywhere on your site using a shortcode. It includes features such as customizable form fields, CAPTCHA for spam protection, and email notifications.
 
-Download the plugin zip file from this repository.
-Navigate to "Plugins" -> "Add New" in your WordPress admin panel.
-Click "Upload Plugin," choose the downloaded zip file, and proceed with "Install Now" and "Activate Plugin."
-Usage:
+## Installation
 
-Access "Contact Forms" within your WordPress admin panel.
-Create a new contact form or edit an existing one.
-Customize form fields, labels, and options to your preferences.
-Copy the generated shortcode and paste it into the desired page, post, or widget.
-Documentation:
+Follow these steps to install and activate WP Contact Form:
 
-For comprehensive documentation and thorough usage instructions, visit our website: [Your Website URL]
+1. Download the plugin files and upload the `wp-contact-form` folder to the `/wp-content/plugins/` directory, or install the plugin directly through the WordPress plugins screen.
+2. Activate the plugin through the 'Plugins' screen in WordPress.
+3. Navigate to the WP Contact Form settings page to configure the plugin and customize your contact form.
+4. Use the provided shortcode `[wp_contact_form]` to add the contact form to your pages or posts.
 
-Contributing:
+## Frequently Asked Questions
 
-We encourage enthusiastic contributions to this plugin! Refer to the CONTRIBUTING.md file for more information.
+### How do I add the contact form to a page?
 
-License:
+Use the shortcode `[wp_contact_form]` in the content editor for the page where you want the contact form to appear.
 
-This plugin is distributed under the GNU General Public License (GPL) v3. Please consult the LICENSE.md file for details.
+### Can I customize the email address that receives the contact form submissions?
 
-Enjoy the experience of using [Plugin Name]!
+Yes, you can customize the recipient email address in the WP Contact Form settings page within your WordPress dashboard.
 
-Optional Add-Ons:
+## Screenshots
 
-Include screenshots showcasing the plugin's functionalities.
-Provide links to demo sites, if available.
-Detail compatible WordPress and PHP versions.
-Specify compatibility with other prominent plugins.
-List any known issues and their solutions.
-Share your contact information for support inquiries.
-I trust this reads.me format meets your expectations! Feel free to ask if you have further questions.
+1. The WP Contact Form settings page where you can customize your form.
+2. Example of a contact form displayed on a website.
+
+## Changelog
+
+### 1.0.0
+- Initial release.
+
+## Upgrade Notice
+
+### 1.0.0
+- Welcome to WP Contact Form! This is our first release. Please test the contact form on your site and let us know if you encounter any issues.
+
+## Additional Sections
+
+Feel free to add any additional sections that you feel are necessary, such as "Support," "Credits," or "Acknowledgments." Remember to keep your plugin updated and to listen to the community for any feedback or feature requests.
