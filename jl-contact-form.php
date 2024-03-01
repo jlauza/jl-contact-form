@@ -48,7 +48,7 @@ require_once('security.php');
         wp_enqueue_script('jquery-custom', 'https://code.jquery.com/jquery-3.6.0.min.js', array('jquery'), '3.6.0', true);
         wp_enqueue_style('jl-contact-form', plugin_dir_url(__FILE__) . 'css/contact-form.css', array(), '1.0.0', 'all');
         wp_enqueue_style('bootstrap', plugin_dir_url(__FILE__) . 'css/bootstrap.css', array(), '5.3.2', 'all');
-        wp_enqueue_script('jl-contact-form', plugin_dir_url(__FILE__) . 'js/contact-form.js', array('jquery'), '3.6.0', true);
+        // wp_enqueue_script('jl-contact-form', plugin_dir_url(__FILE__) . 'js/contact-form.js', array('jquery'), '3.6.0', true);
         wp_enqueue_script('bootstrap', plugin_dir_url(__FILE__) . 'js/bootstrap.bundle.js', array('jquery'), '5.3.2', true);
         wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js', array('jquery'), '2.10.2', true);
     }
@@ -60,46 +60,48 @@ require_once('security.php');
     }
 
     public function register_rest_api() {
-        register_rest_route('jl-contact-form/v1', 'submit', array(
+        register_rest_route('v1/jl-contact-form', 'submit', array(
             'methods' => 'POST',
             'callback' => array($this, 'handle_submit_contact_form'),
-            'permission_callback' => '__return_true'
+            // 'permission_callback' => '__return_true'
         ));
     }
 
     public function handle_submit_contact_form($data) {
         // Get headers and params
-        $headers = $data->get_headers();
-        $params = $data->get_params();
-        $nonce = $headers['x_wp_nonce'][0];
+        // $headers = $data->get_headers();
+        // $params = $data->get_params();
+        // $nonce = $headers['x_wp_nonce'][0];
         
-        // Verify nonce
-        if(!wp_verify_nonce($nonce, 'wp_rest')) {
-            return new WP_REST_Response(array('message' => 'Invalid nonce! Message not sent.'), 403);
-        } else {
-            return new WP_REST_Response(array('message' => 'Valid nonce'), 200);
-        }
+        // // Verify nonce
+        // if(!wp_verify_nonce($nonce, 'wp_rest')) {
+        //     return new WP_REST_Response(array('message' => 'Invalid nonce! Message not sent.'), 403);
+        // } else {
+        //     return new WP_REST_Response(array('message' => 'Valid nonce'), 200);
+        // }
 
-        // Sanitize data
-        $name = sanitize_text_field($data['name']);
-        $email = sanitize_email($data['email']);
-        $message = sanitize_textarea_field($data['message']);
+        // // Sanitize data
+        // $name = sanitize_text_field($data['name']);
+        // $email = sanitize_email($data['email']);
+        // $message = sanitize_textarea_field($data['message']);
 
-        // Insert data to database
-        $post_id = wp_insert_post(array(
-            'post_title' => 'Contact enquiry from ' . $name,
-            'post_content' => $message,
-            'post_status' => 'publish',
-            'post_type' => 'contact_form'
-        ));
+        // // Insert data to database
+        // $post_id = wp_insert_post(array(
+        //     'post_title' => 'Contact enquiry from ' . $name,
+        //     'post_content' => $message,
+        //     'post_status' => 'publish',
+        //     'post_type' => 'contact_form'
+        // ));
 
-        // Update post meta
-        if ($post_id) {
-            update_post_meta($post_id, 'email', $email);
-            return new WP_REST_Response(array('message' => 'Contact form submitted successfully'), 200);
-        } else {
-            return new WP_REST_Response(array('message' => 'Failed to submit contact form'), 500);
-        }
+        // // Update post meta
+        // if ($post_id) {
+        //     update_post_meta($post_id, 'email', $email);
+        //     return new WP_REST_Response(array('message' => 'Contact form submitted successfully'), 200);
+        // } else {
+        //     return new WP_REST_Response(array('message' => 'Failed to submit contact form'), 500);
+        // }
+
+        echo 'Form submitted!';
     }
 
  }
