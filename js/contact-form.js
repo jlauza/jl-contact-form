@@ -1,4 +1,4 @@
-$(document).ready(function () { 
+jQuery(document).ready(function () { 
     $('#contact-form').submit(function (e) {
         e.preventDefault();
         var form = $(this);
