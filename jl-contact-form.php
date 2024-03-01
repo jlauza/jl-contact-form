@@ -46,9 +46,9 @@ require_once('security.php');
 
     public function load_assets() {
         wp_enqueue_script('jquery-custom', 'https://code.jquery.com/jquery-3.6.0.min.js', array('jquery'), '3.6.0', true);
-        wp_enqueue_style('contact-form', plugin_dir_url(__FILE__) . 'css/contact-form.css', array(), '1.0.0', 'all');
+        wp_enqueue_style('jl-contact-form', plugin_dir_url(__FILE__) . 'css/contact-form.css', array(), '1.0.0', 'all');
         wp_enqueue_style('bootstrap', plugin_dir_url(__FILE__) . 'css/bootstrap.css', array(), '5.3.2', 'all');
-        wp_enqueue_script('contact-form', plugin_dir_url(__FILE__) . 'js/contact-form.js', array('jquery'), '3.6.0', true);
+        wp_enqueue_script('jl-contact-form', plugin_dir_url(__FILE__) . 'js/contact-form.js', array('jquery'), '3.6.0', true);
         wp_enqueue_script('bootstrap', plugin_dir_url(__FILE__) . 'js/bootstrap.bundle.js', array('jquery'), '5.3.2', true);
         wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js', array('jquery'), '2.10.2', true);
     }
@@ -60,7 +60,7 @@ require_once('security.php');
     }
 
     public function register_rest_api() {
-        register_rest_route('contact-form/v1', 'submit', array(
+        register_rest_route('jl-contact-form/v1', 'submit', array(
             'methods' => 'POST',
             'callback' => array($this, 'handle_submit_contact_form'),
             'permission_callback' => '__return_true'
